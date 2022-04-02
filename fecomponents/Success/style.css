@@ -1,0 +1,640 @@
+@font-face {
+  font-family: "Avengers";
+  src: url("../Media/Fonts/Avengers.TTF");
+}
+@font-face {
+  font-family: "CaptMarvel";
+  src: url("../Media/Fonts/CaptMarvel.TTF");
+}
+@font-face {
+  font-family: "Disassembled";
+  src: url("../Media/Fonts/Disassembled.TTF");
+}
+@font-face {
+  font-family: "Avenged";
+  src: url("../Media/Fonts/Avenged.ttf");
+}
+@font-face {
+  font-family: "xmen";
+  src: url("../Media/Fonts/xmen.ttf");
+}
+@font-face {
+  font-family: "HA";
+  src: url("../Media/Fonts/HA.ttf");
+}
+@font-face {
+  font-family: "HA2";
+  src: url("../Media/Fonts/HA.ttf2");
+}
+@font-face {
+  font-family: "BP";
+  src: url("../Media/Fonts/BP.ttf");
+}
+
+:root {
+  max-height: 1200px;
+  max-width: 1920px;
+
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+  }
+
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+  }
+
+  @media all and (min-width: 480px) and (max-width: 768px) {
+  }
+
+  @media all and (max-width: 480px) {
+  }
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../Media/Photos/yondu.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  line-height: 50px;
+  text-align: center;
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+  line-height: 40px;
+}
+@media all and (min-width: 480px) and (max-width: 768px) { 
+height: auto;
+line-height: 20px;
+}
+@media all and (max-width: 480px) {
+  height: auto;
+  line-height: 10;
+ }
+}
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 1rem;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { }
+ 
+@media all and (max-width: 480px) { }
+  
+}
+
+.nav div.logo img:hover {
+  width: 110%;
+  transition: .45s ease-in-out; 
+
+}
+
+.nav div.main_list {
+  height: 65px;
+  float: right;
+  @media all and (min-width: 1024px) and (max-width: 1280px) { 
+    height: 55px;
+  }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+  height: 40px;
+}
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { 
+  height: 20px;
+}
+ 
+@media all and (max-width: 480px) { 
+  height: 10px;
+
+}
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 2rem;
+  padding-left: 1;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 65px;
+  padding-left: 4rem;
+  @media all and (min-width: 480px) and (max-width: 1280px) {
+    padding-left: auto;
+   }
+ 
+}
+
+.nav div.main_list ul li a {
+  font-family: "Disassembled";
+  color: #fff;
+  line-height: 65px;
+  font-size: 1.2rem;
+  font-style: oblique;
+  text-decoration: none;
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+    font-size: 0.8rem;
+   }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) { 
+  font-size: 0.6rem;
+}
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { 
+  padding-left: 0.5rem;
+}
+ 
+@media all and (max-width: 480px) { 
+  padding-left: 0.25rem;
+}
+ 
+  
+}
+
+.nav div.main_list ul li a:hover {
+  color: #F0131E;
+  font-size: 1.5rem;
+  transition: .45s ease-in-out; 
+}
+
+/* Home section */
+
+.home {
+  width: 100%;
+  height: 50vh;
+  background-position: center top;
+  background-size: cover;
+}
+
+.navTrigger {
+  display: none;
+}
+
+.nav {
+  padding-top: 10rem;
+  padding-bottom: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 100vwpx) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 100vwx) {
+  .navTrigger {
+    display: block;
+  }
+  .nav div.logo {
+    margin-left: 15px;
+  }
+  .nav div.main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  .nav div.show_list {
+    height: auto;
+    display: none;
+  }
+  .nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #111;
+    background-position: center top;
+  }
+  .nav div.main_list ul li {
+    width: 100%;
+    text-align: right;
+  }
+  .nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 20px;
+  }
+  .nav div.media_button {
+    display: block;
+  }
+}
+
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+}
+
+.navTrigger i {
+  background-color: #fff;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes inBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+.affix {
+  padding: 0;
+  background-color: #111;
+}
+
+
+#break_for_animation {
+  padding-top: 100px;
+  position: relative;
+  max-width: 1300px;
+  max-height: 1000px;
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+
+   }
+   
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+
+   }
+   
+  @media all and (min-width: 480px) and (max-width: 768px) { 
+ }
+   
+  @media all and (max-width: 480px) {
+   }
+}
+.jumbotron {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+
+  }
+  
+ @media all and (min-width: 768px) and (max-width: 1024px) {
+
+  }
+  
+ @media all and (min-width: 480px) and (max-width: 768px) { 
+}
+  
+ @media all and (max-width: 480px) {
+  }
+}
+
+@keyframes success {
+  from {
+    background-image: url("../Media/Photos/ultron2.png");
+    font-size: 2rem;
+    width: 1000px;
+    height: 750px;
+    opacity: 0.92;
+  }
+  to {
+    background-image: url("../Media/Photos/zombies.png");
+    justify-content: center;
+    background-color: #020202;
+    font-size: 7rem;
+  }
+}
+
+.contain {
+
+  width: 1200px;
+  height: 750px;
+  border: 1em black solid;
+  background: #020202;
+  background-image: url("../Media/Photos/ultron2.png");
+  animation-name: success;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-position: fixed;
+  font-family: Avengers;
+
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+
+  }
+  
+ @media all and (min-width: 768px) and (max-width: 1024px) {
+
+  }
+  
+ @media all and (min-width: 480px) and (max-width: 768px) { 
+}
+  
+ @media all and (max-width: 480px) {
+  }
+
+}
+.lead {
+  font-family: CaptMarvel;
+  font-size: 2.1rem;
+  padding: 5rem;
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+
+  }
+  
+ @media all and (min-width: 768px) and (max-width: 1024px) {
+   fomt-size: 1.8rem;
+
+  }
+  
+ @media all and (min-width: 480px) and (max-width: 768px) { 
+  font-size: 1.1rem;
+}
+  
+ @media all and (max-width: 480px) {
+font-size: 0.6rem;  
+}
+}
+
+.display-4 {
+  position: relative;
+  opacity: 0.9;
+  align-items: center;
+  padding: 10rem 5rem 10rem 10rem;
+  justify-content: center;
+  color: #fff;
+  bottom: 10px;
+  padding-bottom: 20px;
+  font-size: 5rem;
+  
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+font-size: 4rem;
+  }
+  
+ @media all and (min-width: 768px) and (max-width: 1024px) {
+font-size: 3rem;
+  }
+  
+ @media all and (min-width: 480px) and (max-width: 768px) { 
+font-size: 2rem;
+}
+  
+ @media all and (max-width: 480px) {
+   font-size: 1rem;
+  }
+
+}
+
+#try_again {
+  max-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1em black solid;
+  background: #020202;
+  background-image: url("../Media/Photos/bpmonger.png");
+  padding: 2rem 5rem;
+  font-family: CaptMarvel;
+  font-size: 2.1rem;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+#wrap {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 5rem 2rem 5rem;
+}
+button {
+  margin: 40px 500px;
+  position: relative;
+  flex-direction: row;
+  border-radius: 54%;
+  padding: 10px;
+  font-style: oblique;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  height: 100px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  box-shadow: 0.5px 2px 0.5px 1px white;
+  background: -webkit-linear-gradient(
+    130deg,
+    #000 12%,
+    #010101 46%,
+    #020202 100%
+  );
+  border: solid 0.25rem #fff;
+  transition-duration: 0.3s;
+}
+#play_button:hover {
+  background-color: #020202;
+  color: white;
+  box-shadow: 1px 2px 1px 1px white;
+  transform: scale(2, 2);
+  border: solid 0.25rem white;
+  font-family: BP;
+}
+
+#audio_section {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  margin: 0.25rem 0.25rem;
+  position: relative;
+}
